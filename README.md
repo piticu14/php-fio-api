@@ -8,7 +8,7 @@ Fio bank REST API implementation in PHP. It allows you to download and iterate t
 
 Usage
 ----
-1. Install the latest version with `composer require mhujer/fio-api-php`
+1. Install the latest version with `composer require perlur/php-fio-api`
 2. Create a *token* in the ebanking (Nastavení / API)
 3. Use it according to the example bellow and check the docblocks
 
