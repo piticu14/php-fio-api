@@ -13,7 +13,7 @@ class ImportResponse
     /**
      * @var \SimpleXMLElement
      */
-    private $xml;
+    protected $xml;
 
     public function __construct($xml)
     {
