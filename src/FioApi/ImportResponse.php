@@ -63,4 +63,14 @@ class ImportResponse
     {
         return (float) $this->xml->result->sums->xpath("sum[@id = '{$currency}']")[0]->sumCredit;
     }
+
+  /**
+   * Get messages.
+   *
+   * @return array
+   */
+  public function getMessages()
+  {
+    return (array) $this->xml->ordersDetails->detail->messages->message;
+  }
 }
