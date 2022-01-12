@@ -12,6 +12,7 @@ class ImportResponseTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('ok', $response->getStatus());
         $this->assertEquals(200.0, $response->getDebitSum('CZK'));
         $this->assertEquals(0.0, $response->getCreditSum('CZK'));
+        $this->assertContains('OK', $response->getMessages());
     }
 
     public function testMultipleOkReponses()
@@ -22,5 +23,6 @@ class ImportResponseTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('ok', $response->getStatus());
         $this->assertEquals(250.0, $response->getDebitSum('CZK'));
         $this->assertEquals(0.0, $response->getCreditSum('CZK'));
+        $this->assertContains('OK', $response->getMessages());
     }
 }
