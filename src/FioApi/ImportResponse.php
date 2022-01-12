@@ -71,6 +71,6 @@ class ImportResponse
    */
   public function getMessages()
   {
-    return (array) $this->xml->ordersDetails->detail->messages->message;
+    return (array)((array)($this->xml->ordersDetails->xpath("detail")[0]->messages))['message'];
   }
 }
